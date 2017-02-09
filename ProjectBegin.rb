@@ -19,27 +19,27 @@ in this project you will be creating a program that tells people what grade they
 # so the person will need 71.25-45=26.5 points on the next test or 106% to get a 95%
 
 def test
-puts "What is your percentage in the class right now? Please put it in as a percentage such as .8 for 80%, and type it in digits only."
+puts "What is your percentage in the class right now? Please put it in as a decimal such as .8 for 80%, and type it in digits only."
 grade = gets.to_f
 #Above code allows Ruby to get your current grade
 puts "As for the points your upcoming test is worth?"
 worth = gets.to_f
 #Above code lets Ruby know how many points the test is worth
-puts "What would you like your grade percentage to be after the test?"
+puts "What would you like your grade as a decimal to be after the test?"
 after = gets.to_f
 #This part lets Ruby know what grade you want from the test
 puts "How many points total has your class earned so far?"
 total = gets.to_f
 #This part lets you know how many points the class has earned so far
-puts "How many points in the class have you earned?"
-points = gets.to_f
-#This code lets the program know how many points you've earned in the class
 
-totalPoints = (grade * total)
-totalPointsWithTest = (total + worth)
-dreamGrade = (after*totalPointsWithTest)
+ #this part is the most important part to comment, as it is the most complicated. The other parts of the code are relatively self explanatory. 
+totalPoints = (grade * total)#yep
+totalPointsWithTest = (total + worth)#yep
+dreamGrade = (after*totalPointsWithTest)#yep
 neededGrade = ((dreamGrade - totalPoints)/worth)*100
 #This code calculates the grade
-return "You will need to earn a #{neededGrade}% on the test to get the grade you want."
+puts "You will need to earn a #{neededGrade}% on the test to get the grade you want."
 #This code lets you know what grade you need
 end
+#you have to run this method in order for it to work in terminal
+test
